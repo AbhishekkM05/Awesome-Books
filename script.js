@@ -1,6 +1,18 @@
 const form = document.querySelector('#book-form');
 const bookListContainer = document.querySelector('#book-list');
-const books = [];
+let books = [];
+
+//local storage
+ const storedBooks = localStorage.getItem('books');
+ if (storedBooks) {
+ 	books = JSON.parse(storedBooks);
+    bookListContainer.innerHTML = "";
+    books.forEach((book, index) => {
+        displayBooks(book, index)
+    });
+ } else {
+	localStorage.setItem('books', JSON.stringify(books));
+ }
 
 // create a book obj
 function BookObj(title, author) {
@@ -15,12 +27,14 @@ function addBook(event) {
     const author= event.target[1].value;
     const newBook = new BookObj(title, author);
     books.push(newBook);
+    localStorage.setItem('books', JSON.stringify(books));
     displayBooks(newBook, books.length - 1);
 }
 
 // delete a book
 function removeBook(index) {
     books.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(books));
     bookListContainer.innerHTML = '';
     books.forEach((book, index) => {
         displayBooks(book, index)
@@ -38,6 +52,7 @@ function displayBooks({
     removeBtn.addEventListener('click', () => {removeBook(index)});
     li.appendChild(removeBtn);
     bookListContainer.appendChild(li);
+    form.reset()
 }
 
 form.addEventListener('submit',addBook);
