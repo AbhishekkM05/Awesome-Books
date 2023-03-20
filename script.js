@@ -6,8 +6,8 @@ let books = [];
 function displayBooks() {
   bookListContainer.innerHTML = '';
   books.forEach(({ title, author }, index) => {
-    const li = document.createElement('li');
-    li.textContent = `${title} by ${author} `;
+    const li = document.createElement('div');
+    li.innerHTML = `${title} <br> ${author} <br>`;
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Remove';
     removeBtn.addEventListener('click', () => {
@@ -17,6 +17,8 @@ function displayBooks() {
       displayBooks();
     });
     li.appendChild(removeBtn);
+    const line = document.createElement('hr');
+    li.appendChild(line);
     bookListContainer.appendChild(li);
   });
   form.reset();
