@@ -2,38 +2,32 @@ const form = document.querySelector('#book-form');
 const bookListContainer = document.querySelector('#book-list');
 let books = [];
 
-// delete a book
-function removeBook(index) {
-  books.splice(index, 1);
-  localStorage.setItem('books', JSON.stringify(books));
-  update();
-}
-
 // display books
-function displayBooks({
-  title, author,
-}, index) {
-  const li = document.createElement('li');
-  li.textContent = `${title} by ${author} `;
-  const removeBtn = document.createElement('button');
-  removeBtn.textContent = 'Remove';
-  removeBtn.addEventListener('click', () => { removeBook(index); });
-  li.appendChild(removeBtn);
-  bookListContainer.appendChild(li);
-  form.reset();
-}
-function update() {
+function displayBooks() {
   bookListContainer.innerHTML = '';
-  books.forEach((book, index) => {
-    displayBooks(book, index);
+  books.forEach(({ title, author }, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${title} by ${author} `;
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener('click', () => {
+      // remove a Book;
+      books.splice(index, 1);
+      localStorage.setItem('books', JSON.stringify(books));
+      displayBooks();
+    });
+    li.appendChild(removeBtn);
+    bookListContainer.appendChild(li);
   });
+  form.reset();
 }
 
 // local storage
 const storedBooks = localStorage.getItem('books');
 if (storedBooks) {
   books = JSON.parse(storedBooks);
-  update();
+  bookListContainer.innerHTML = '';
+  displayBooks();
 } else {
   localStorage.setItem('books', JSON.stringify(books));
 }
@@ -52,7 +46,7 @@ function addBook(event) {
   const newBook = new BookObj(title, author);
   books.push(newBook);
   localStorage.setItem('books', JSON.stringify(books));
-  displayBooks(newBook, books.length - 1);
+  displayBooks();
 }
 
 form.addEventListener('submit', addBook);
