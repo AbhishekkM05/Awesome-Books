@@ -1,3 +1,58 @@
 * {
   box-sizing: border-box;
 }
+
+#book-list {
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.book:nth-child(odd) {
+  background-color: grey;
+}
+
+.book:nth-child(even) {
+  background-color: yellow;
+}
+
+.remove {
+  margin-left: auto;
+  box-shadow: 3px 3px;
+  background-color: rgba(61, 61, 102, 0.5);
+}
+
+.remove:hover {
+  background-color: red;
+}
+
+#list-title {
+  text-align: center;
+}
+
+#book-form {
+  margin-inline: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#book-form input {
+  border: 3px solid black;
+  padding: 5px;
+}
+
+#form-title {
+  margin-inline: auto;
+}
+
+button[type="submit"] {
+  align-self: flex-end;
+  border: 2px solid black;
+}

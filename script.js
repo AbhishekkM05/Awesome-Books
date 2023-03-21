@@ -27,14 +27,13 @@ class BookList {
     this.bookListContainer.innerHTML = '';
     this.books.forEach((book, index) => {
       const li = document.createElement('div');
+      li.className = 'book';
       li.innerHTML = `<span class="name">"${book.title}"</span> by <span class="names">${book.author}</span> `;
       const removeBtn = document.createElement('button');
       removeBtn.className = 'remove';
       removeBtn.textContent = 'Remove';
       removeBtn.setAttribute('data-index', index);
       li.appendChild(removeBtn);
-      const line = document.createElement('hr');
-      li.appendChild(line);
       this.bookListContainer.appendChild(li);
     });
     this.form.reset();
