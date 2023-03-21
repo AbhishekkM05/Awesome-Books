@@ -9,13 +9,9 @@ function displayBooks() {
     const li = document.createElement('div');
     li.innerHTML = `${title} <br> ${author} <br>`;
     const removeBtn = document.createElement('button');
+    removeBtn.className = 'remove';
     removeBtn.textContent = 'Remove';
-    removeBtn.addEventListener('click', () => {
-      // remove a Book;
-      books.splice(index, 1);
-      localStorage.setItem('books', JSON.stringify(books));
-      displayBooks();
-    });
+    removeBtn.setAttribute('id', index);
     li.appendChild(removeBtn);
     const line = document.createElement('hr');
     li.appendChild(line);
@@ -51,4 +47,16 @@ function addBook(event) {
   displayBooks();
 }
 
+function removeBook(index) {
+  // remove a Book;
+  books.splice(index, 1);
+  localStorage.setItem('books', JSON.stringify(books));
+  displayBooks();
+}
+
 form.addEventListener('submit', addBook);
+bookListContainer.addEventListener('click', (e) => {
+  if (e.target.className === 'remove') {
+    removeBook(e.target.id);
+  }
+});
