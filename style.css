@@ -8,7 +8,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 50px;
+  padding-inline: 10px;
   padding-block: 10px;
   margin-bottom: 20px;
   border: 4px solid black;
@@ -71,7 +71,6 @@ nav {
 
 #book-form {
   margin-inline: auto;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -99,7 +98,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background: rgba(0, 128, 0, 0.5);
-} 
+}
 
 #Contact {
   font-size: 1.3rem;
@@ -137,4 +136,15 @@ footer header {
 #book-list-section {
   justify-content: start;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    padding-inline: 50px;
+  }
+  #book-list {
+    width: 80%;
+    max-width: 800px;
+    margin-inline: auto;
+  }
 }
