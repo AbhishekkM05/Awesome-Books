@@ -137,7 +137,8 @@ footer {
   justify-content: center;
 }
 
-footer header {
+footer, 
+header {
   height: 50px;
 }
 
@@ -151,6 +152,12 @@ footer header {
 #book-list-section {
   justify-content: start;
   flex-direction: column;
+}
+
+.btn-active {
+  color: orangered;
+  border-color: orangered;
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 768px) {

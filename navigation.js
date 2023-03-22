@@ -6,10 +6,14 @@ function renderPage(e) {
   sections.forEach((section) => {
     section.style.display = 'none';
   });
+  navBtns.forEach((btn) => {
+    btn.classList.remove("btn-active")
+  })
   const btn = e.target;
   const idOfClicked = btn.getAttribute('data-id');
   const section = document.querySelector(`#${idOfClicked}`);
   section.style.display = 'flex';
+  btn.classList.toggle("btn-active")
 }
 
 navBtns.forEach((each) => {
@@ -18,4 +22,5 @@ navBtns.forEach((each) => {
 
 window.onload = () => {
   bookListSection.style.display = 'flex';
+  Array.from(navBtns)[0].className = "btn-active"
 };
