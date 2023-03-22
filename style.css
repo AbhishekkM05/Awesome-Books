@@ -33,11 +33,13 @@ nav {
 }
 
 #book-list {
+  min-height: calc(100vh - 100px);
   border: 2px solid black;
   margin-bottom: 20px;
 }
 
 .book {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -101,10 +103,6 @@ button[type="submit"]:hover {
 } 
 
 #Contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: 1.3rem;
 }
 
@@ -115,4 +113,17 @@ footer {
   position: absolute;
   bottom: 10px;
   text-align: center;
+}
+
+#form,
+#Contact {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer header {
+  height: 50px;
 }
