@@ -1,4 +1,6 @@
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -7,6 +9,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding-inline: 50px;
+  padding-block: 10px;
+  margin-bottom: 20px;
   border: 4px solid black;
 }
 
@@ -19,12 +23,13 @@ nav {
   padding-inline: 10px;
   border-right: 2px solid black;
   cursor: pointer;
-  transition: color 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
 }
 
 #navbar li:hover {
   color: blue;
   border-color: blue;
+  font-weight: 600;
 }
 
 #book-list {
@@ -80,4 +85,12 @@ nav {
 button[type="submit"] {
   align-self: flex-end;
   border: 2px solid black;
+}
+
+footer {
+  border: 4px solid black;
+  padding: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
 }
