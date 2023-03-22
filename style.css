@@ -101,7 +101,23 @@ button[type="submit"]:hover {
 }
 
 #Contact {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+}
+
+#Contact h3 {
+  margin-bottom: 50px;
+}
+
+#Contact p {
+  margin-left: 20px;
+}
+
+#Contact ul {
+  margin-top: 10px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 footer {
@@ -115,7 +131,6 @@ footer {
 
 #form,
 #Contact {
-  /* min-height: calc(100vh - 100px); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,9 +157,14 @@ footer header {
   nav {
     padding-inline: 50px;
   }
+
   #book-list {
     width: 80%;
     max-width: 800px;
     margin-inline: auto;
+  }
+
+  #Contact {
+    font-size: 1.4rem;
   }
 }
