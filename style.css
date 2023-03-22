@@ -2,6 +2,31 @@
   box-sizing: border-box;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 50px;
+  border: 4px solid black;
+}
+
+#navbar {
+  display: flex;
+  list-style: none;
+}
+
+#navbar li {
+  padding-inline: 10px;
+  border-right: 2px solid black;
+  cursor: pointer;
+  transition: color 0.05s ease-in-out;
+}
+
+#navbar li:hover {
+  color: blue;
+  border-color: blue;
+}
+
 #book-list {
   border: 2px solid black;
   margin-bottom: 20px;
