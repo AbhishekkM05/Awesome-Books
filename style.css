@@ -33,9 +33,12 @@ nav {
 }
 
 #book-list {
-  min-height: calc(100vh - 100px);
   border: 2px solid black;
   margin-bottom: 20px;
+}
+
+#book-list-section {
+  min-height: calc(100vh - 100px);
 }
 
 .book {
