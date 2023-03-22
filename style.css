@@ -37,10 +37,6 @@ nav {
   margin-bottom: 20px;
 }
 
-#book-list-section {
-  min-height: calc(100vh - 100px);
-}
-
 .book {
   width: 100%;
   display: flex;
@@ -120,7 +116,7 @@ footer {
 
 #form,
 #Contact {
-  min-height: calc(100vh - 100px);
+  /* min-height: calc(100vh - 100px); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,4 +125,16 @@ footer {
 
 footer header {
   height: 50px;
+}
+
+#form,
+#Contact,
+#book-list-section {
+  display: none;
+  min-height: calc(100vh - 100px);
+}
+
+#book-list-section {
+  justify-content: start;
+  flex-direction: column;
 }
