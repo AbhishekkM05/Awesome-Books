@@ -53,7 +53,10 @@ nav {
 
 .remove {
   margin-left: auto;
-  box-shadow: 3px 3px;
+  padding: 3px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 3px 3px 4px;
   background-color: rgba(61, 61, 102, 0.5);
 }
 
@@ -71,6 +74,9 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
 }
 
 #book-form input {
@@ -85,6 +91,21 @@ nav {
 button[type="submit"] {
   align-self: flex-end;
   border: 2px solid black;
+  box-shadow: 2px 2px 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: rgba(0, 128, 0, 0.5);
+} 
+
+#Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
 }
 
 footer {
@@ -93,4 +114,5 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 10px;
+  text-align: center;
 }
