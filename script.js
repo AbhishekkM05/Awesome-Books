@@ -23,12 +23,25 @@ class BookList {
     }
   }
 
+  capitalize(name) {
+    return name.split('').map((each, index) => {
+      if(index === 0) {
+        return each.toUpperCase();
+      }
+      return each
+    }).join('');
+  }
+
   displayBooks() {
     this.bookListContainer.innerHTML = '';
     this.books.forEach((book, index) => {
       const li = document.createElement('div');
       li.className = 'book';
-      li.innerHTML = `<span class="name">"${book.title}"</span> by <span class="names">${book.author}</span> `;
+
+      let title = this.capitalize(book.title);
+      const author = this.capitalize(book.author);
+
+      li.innerHTML = `"${title}" by ${author}`;
       const removeBtn = document.createElement('button');
       removeBtn.className = 'remove';
       removeBtn.textContent = 'Remove';
