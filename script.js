@@ -23,23 +23,22 @@ class BookList {
     }
   }
 
-  capitalize(name) {
-    return name.split('').map((each, index) => {
-      if(index === 0) {
-        return each.toUpperCase();
-      }
-      return each
-    }).join('');
-  }
-
   displayBooks() {
     this.bookListContainer.innerHTML = '';
     this.books.forEach((book, index) => {
       const li = document.createElement('div');
+      function capitalize(name) {
+        return name.split('').map((each, index) => {
+          if (index === 0) {
+            return each.toUpperCase();
+          }
+          return each;
+        }).join('');
+      }
       li.className = 'book';
 
-      let title = this.capitalize(book.title);
-      const author = this.capitalize(book.author);
+      const title = capitalize(book.title);
+      const author = capitalize(book.author);
 
       li.innerHTML = `"${title}" by ${author}`;
       const removeBtn = document.createElement('button');
