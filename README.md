@@ -36,7 +36,7 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-Project was created using HTML and Javascript.
+Project was created using HTML CSS and Javascript.
 
 <!-- Features -->
 
