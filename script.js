@@ -27,8 +27,20 @@ class BookList {
     this.bookListContainer.innerHTML = '';
     this.books.forEach((book, index) => {
       const li = document.createElement('div');
+      function capitalize(name) {
+        return name.split('').map((each, index) => {
+          if (index === 0) {
+            return each.toUpperCase();
+          }
+          return each;
+        }).join('');
+      }
       li.className = 'book';
-      li.innerHTML = `<span class="name">"${book.title}"</span> by <span class="names">${book.author}</span> `;
+
+      const title = capitalize(book.title);
+      const author = capitalize(book.author);
+
+      li.innerHTML = `"${title}" by ${author}`;
       const removeBtn = document.createElement('button');
       removeBtn.className = 'remove';
       removeBtn.textContent = 'Remove';
@@ -64,5 +76,19 @@ class BookList {
     });
   }
 }
+
+setInterval(() => {
+  const date = new Date();
+  const dateTime = date.toDateString();
+  const hours = date.getHours() <= 12 ? date.getHours() : date.getHours() - 12;
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const morEve = date.getHours() < 12 ? 'am' : 'pm';
+
+  document.querySelector('#date').textContent = `${dateTime}, ${hours}:${minutes}:${seconds} ${morEve}`;
+}, 1000);
+
 const myBookList = new BookList();
 myBookList.setupEventListeners();
+
+// month, date, year, time
