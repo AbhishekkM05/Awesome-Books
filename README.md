@@ -21,7 +21,6 @@
   - [Usage](#usage)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -37,7 +36,7 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-Project was created using HTML and Javascript.
+Project was created using HTML CSS and Javascript.
 
 <!-- Features -->
 
@@ -105,7 +104,6 @@ To run tests, interact with the website on your browser.
 - GitHub: [@githubhandle](https://github.com/Bennyjoez)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
