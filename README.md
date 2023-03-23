@@ -14,7 +14,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -30,9 +29,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome books] <a name="about-project"></a>
+# 📖 [Awesome books Website] <a name="about-project"></a>
 
-**[Awesome Books]** is a single page web app where users can add and deletes books. 
+**[Awesome Books Website]** is a single page web app where users can add and deletes books. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,14 +46,7 @@ Project was created using HTML and Javascript.
 - **[Form]**
 - **[Book List]**
 - **[Add/Remove option for books]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://google.com)
+- **[Navigation for website]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,21 +103,6 @@ To run tests, interact with the website on your browser.
 👤 **Benson Njuguna**
 
 - GitHub: [@githubhandle](https://github.com/Bennyjoez)
-
-
-👤 **Bertin Kambale**
-
-- GitHub: [@githubhandle](https://github.com/bertinkambale)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[Navigation]**
-- [ ] **[Contact]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
